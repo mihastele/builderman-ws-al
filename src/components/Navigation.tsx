@@ -1,9 +1,6 @@
-"use client";
-
 import { useState, useEffect } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Menu, X, Phone } from "lucide-react";
-import Link from "next/link";
 
 const navLinks = [
   { href: "#domov", label: "Domov" },
@@ -37,7 +34,7 @@ export default function Navigation() {
       }`}
     >
       <nav className="container-custom flex items-center justify-between">
-        <Link href="#domov" className="flex items-center gap-3 group">
+        <a href="#domov" className="flex items-center gap-3 group">
           <div className={`w-12 h-12 rounded-lg flex items-center justify-center transition-colors duration-300 ${
             scrolled ? "bg-primary-600" : "bg-white/20 backdrop-blur-sm"
           }`}>
@@ -50,12 +47,12 @@ export default function Navigation() {
               Zidarstvo Lavrič
             </span>
           </div>
-        </Link>
+        </a>
 
         {/* Desktop Navigation */}
         <div className="hidden lg:flex items-center gap-8">
           {navLinks.map((link) => (
-            <Link
+            <a
               key={link.href}
               href={link.href}
               className={`font-medium transition-colors duration-300 hover:text-primary-500 ${
@@ -63,7 +60,7 @@ export default function Navigation() {
               }`}
             >
               {link.label}
-            </Link>
+            </a>
           ))}
           <a
             href="tel:+38640123456"
@@ -108,13 +105,13 @@ export default function Navigation() {
                   animate={{ opacity: 1, x: 0 }}
                   transition={{ delay: index * 0.1 }}
                 >
-                  <Link
+                  <a
                     href={link.href}
                     onClick={() => setIsOpen(false)}
                     className="block py-2 text-lg font-medium text-stone-700 hover:text-primary-600 transition-colors"
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 </motion.div>
               ))}
               <motion.a

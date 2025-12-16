@@ -1,8 +1,5 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { Phone, Mail, MapPin, Clock, Facebook, Instagram } from "lucide-react";
-import Link from "next/link";
 
 export default function Footer() {
   const currentYear = new Date().getFullYear();
@@ -63,12 +60,12 @@ export default function Footer() {
                 { href: "#kontakt", label: "Kontakt" },
               ].map((link) => (
                 <li key={link.href}>
-                  <Link
+                  <a
                     href={link.href}
                     className="text-stone-400 hover:text-primary-500 transition-colors"
                   >
                     {link.label}
-                  </Link>
+                  </a>
                 </li>
               ))}
             </ul>

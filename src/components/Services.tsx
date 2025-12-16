@@ -1,9 +1,5 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { Building2, Hammer, Home, Paintbrush, HardHat, Wrench, ArrowRight } from "lucide-react";
-import Image from "next/image";
-import Link from "next/link";
 
 const services = [
   {
@@ -88,11 +84,10 @@ export default function Services() {
             >
               {/* Image */}
               <div className="relative h-48 overflow-hidden">
-                <Image
+                <img
                   src={service.image}
                   alt={service.title}
-                  fill
-                  className="object-cover transition-transform duration-700 group-hover:scale-110"
+                  className="absolute inset-0 w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-stone-900/60 to-transparent" />
                 <div className="absolute bottom-4 left-4">
@@ -125,7 +120,7 @@ export default function Services() {
                 </ul>
 
                 {/* CTA */}
-                <Link
+                <a
                   href="#kontakt"
                   className="inline-flex items-center gap-2 text-primary-600 font-semibold group/link"
                 >
@@ -134,7 +129,7 @@ export default function Services() {
                     size={18}
                     className="transition-transform group-hover/link:translate-x-1"
                   />
-                </Link>
+                </a>
               </div>
             </motion.div>
           ))}
@@ -155,9 +150,9 @@ export default function Services() {
             Vsak projekt je edinstven. Kontaktirajte nas za brezplačen ogled in 
             svetovanje. Skupaj bomo našli najboljšo rešitev za vaše potrebe.
           </p>
-          <Link href="#kontakt" className="btn-secondary">
+          <a href="#kontakt" className="btn-secondary">
             Kontaktirajte Nas
-          </Link>
+          </a>
         </motion.div>
       </div>
     </section>

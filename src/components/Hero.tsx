@@ -1,8 +1,5 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { ArrowRight, Award, Users, Calendar } from "lucide-react";
-import Link from "next/link";
 
 export default function Hero() {
   return (
@@ -90,13 +87,13 @@ export default function Hero() {
             transition={{ duration: 0.8, delay: 0.6 }}
             className="flex flex-col sm:flex-row gap-4 mb-16"
           >
-            <Link href="#kontakt" className="btn-primary group">
+            <a href="#kontakt" className="btn-primary group">
               <span>Začnite Projekt</span>
               <ArrowRight size={20} className="ml-2 group-hover:translate-x-1 transition-transform" />
-            </Link>
-            <Link href="#galerija" className="btn-secondary">
+            </a>
+            <a href="#galerija" className="btn-secondary">
               Oglejte si Naše Delo
-            </Link>
+            </a>
           </motion.div>
 
           {/* Stats */}

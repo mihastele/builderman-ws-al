@@ -1,8 +1,5 @@
-"use client";
-
 import { motion } from "framer-motion";
 import { CheckCircle2, Heart, Shield, Wrench } from "lucide-react";
-import Image from "next/image";
 
 const values = [
   {
@@ -45,11 +42,10 @@ export default function About() {
             className="relative"
           >
             <div className="relative aspect-[4/5] rounded-2xl overflow-hidden">
-              <Image
+              <img
                 src="https://images.unsplash.com/photo-1581578731548-c64695cc6952?q=80&w=2070&auto=format&fit=crop"
                 alt="Zidarstvo Lavrič - Profesionalno zidarsko delo"
-                fill
-                className="object-cover"
+                className="absolute inset-0 w-full h-full object-cover"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-stone-900/40 to-transparent" />
             </div>
